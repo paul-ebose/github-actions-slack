@@ -1,4 +1,4 @@
- URL="https://hooks.slack.com/services/${SLACK_WEBHOOK_URL}"
+ URL="https://hooks.slack.com/services/${SLACK_TOKEN}"
   curl \
     -sSL \
     -X POST \
