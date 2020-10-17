@@ -13,4 +13,4 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           JSON_PATH: ./slack_message.json
-      - run: ./slack-notify.sh
+        run: ./slack-notify.sh
