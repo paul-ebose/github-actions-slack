@@ -1,7 +1,6 @@
- URL="https://hooks.slack.com/services/${SLACK_TOKEN}"
-  curl \
+   curl \
     -sSL \
     -X POST \
     -H "Content-type: application/json" \
     --data @"${JSON_PATH}" \
-    ${URL}
+    "https://hooks.slack.com/services/${SLACK_TOKEN}"
