@@ -11,7 +11,7 @@ jobs:
 
       - name: Post message on Slack
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_TOKEN: ${{ secrets.SLACK_WEBHOOK_URL }}
           JSON_PATH: ./slack_message.json
         run: |
           chmod +x ./slack-notify.sh
