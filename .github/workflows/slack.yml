@@ -1,0 +1,16 @@
+name: "Notify Slack: New git push"
+
+on: push
+
+jobs:
+  slack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Post message on Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          JSON_PATH: ./slack_message.json
+      - run: ./slack-notify.sh
